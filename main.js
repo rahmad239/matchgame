@@ -1,0 +1,12 @@
+var cardOne = 'smith';
+var cardTwo = 'smith';
+var cardThree = 'obama';
+var cardFour = 'obama';
+var cardFive = 'hicks';
+var cardSix = 'hicks';
+var cardSeven = 'gaines';
+var cardEight = 'gaines';
+var cardNine = 'gossling';
+var cardTen = 'gossling';
+console.log('User Flipped' + ' ' + cardEight);
+console.log('User Flipped' + ' ' + cardFive);
