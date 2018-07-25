@@ -39,9 +39,9 @@ cardsInPlay.push(cardTwo);
 console.log('User Flipped' + ' ' + cardOne);
 console.log('User Flipped' + ' ' + cardTwo);
 
-if (cardsInPlay.length === 2) {
+// sets the if statement to two conditions
+if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
   console.log('two cards are in play');
-} else if (cardsInPlay[0] === cardsInPlay[1]) {
   alert('You have a match!');
 } else {
   alert('Try again!');
