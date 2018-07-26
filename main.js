@@ -29,20 +29,25 @@ var cards = [
 //empty array to hold values of wht is in play
 var cardsInPlay = [];
 
-// create variable to id the cards in play
-var cardOne = cards[0];
-var cardTwo = cards[1];
-//push the value in
-cardsInPlay.push(cardOne);
-cardsInPlay.push(cardTwo);
-// check what was flipped
-console.log('User Flipped' + ' ' + cardOne);
-console.log('User Flipped' + ' ' + cardTwo);
-
-// sets the if statement to two conditions
-if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
-  console.log('two cards are in play');
-  alert('You have a match!');
-} else {
-  alert('Try again!');
-}
+// check for the match
+var checkForMatch = function() {
+  if (cardsInPlay[0] === cardsInPlay[1]) {
+    alert('You found a match!');
+  } else {
+    alert('Sorry, try again.');
+  }
+};
+// create a function called 'flipCard
+var flipCard = function(cardId) {
+  cardsInPlay.push(cards[cardId]);
+  console.log('You flipped half of the ' + cards[cardId] + ' pair.');
+  // sets the if statement to condition of having two cards
+  if (cardsInPlay.length === 2) {
+    console.log('Two cards are in play');
+  } else {
+    alert('Please select a second card!');
+  }
+};
+flipCard(0);
+flipCard(2);
+checkForMatch();
