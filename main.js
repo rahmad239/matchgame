@@ -1,23 +1,9 @@
-// creating a variable to test names
-// var cardOne = 'smith';
-// var cardTwo = 'smith';
-// var cardThree = 'obama';
-// var cardFour = 'obama';
-// var cardFive = 'hicks';
-// var cardSix = 'hicks';
-// var cardSeven = 'gaines';
-// var cardEight = 'gaines';
-// var cardNine = 'gossling';
-// var cardTen = 'gossling';
-// console.log('User Flipped' + ' ' + cardEight);
-// console.log('User Flipped' + ' ' + cardFive);
-
 // creating an array to store values of cards
 var cards = [
   {
     couple: 'smith',
     role: 'wife',
-    cardImage: 'card_image/jadaSmith.jpeg'
+    cardImage: 'card_images/jadaSmith.jpeg'
   },
   {
     couple: 'smith',
@@ -69,6 +55,28 @@ var cards = [
 //empty array to hold values of wht is in play
 var cardsInPlay = [];
 
+// create a function called 'flipCard
+var flipCard = function() {
+  var cardId = this.getAttribute('data-id');
+  this.setAttribute('src', cards[cardId].cardImage);
+  console.log('You flipped half of the ' + cards[cardId].couple + ' pair.');
+  cardsInPlay.push(cards[cardId].couple);
+  console.log(cards[cardId].cardImage);
+  console.log(cards[cardId].role);
+  checkForTwo();
+};
+
+// check for two. sets the if statement to
+// condition of having two cards
+var checkForTwo = function() {
+  if (cardsInPlay.length === 1) {
+    alert('Please select a second card!');
+  } else {
+    console.log('Two cards are in play');
+    checkForMatch();
+  }
+};
+
 // check for the match
 var checkForMatch = function() {
   if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -77,21 +85,17 @@ var checkForMatch = function() {
     alert('Sorry, try again.');
   }
 };
-// create a function called 'flipCard
-var flipCard = function(cardId) {
-  cardsInPlay.push(cards[cardId].couple);
-  console.log('You flipped half of the ' + cards[cardId].couple + ' pair.');
-  console.log(cards[cardId].cardImage);
-  console.log(cards[cardId].role);
-  // sets the if statement to condition of having two cards
-  if (cardsInPlay.length === 2) {
-    console.log('Two cards are in play');
-  } else {
-    alert('Please select a second card!');
-  }
-};
-flipCard(0);
-flipCard(2);
-checkForMatch();
 
 //play with the placement of the statments above to get the alerts to fire in the order you prefer
+
+//create a function to make the board
+var createBoard = function() {
+  for (var i = 0; i < cards.length; i++) {
+    var cardElement = document.createElement('img');
+    cardElement.setAttribute('src', 'card_images/back.png');
+    cardElement.setAttribute('data-id', i);
+    cardElement.addEventListener('click', flipCard);
+    document.getElementById('game-board').appendChild(cardElement);
+  }
+};
+createBoard();
