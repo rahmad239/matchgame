@@ -93,9 +93,18 @@ var createBoard = function() {
   for (var i = 0; i < cards.length; i++) {
     var cardElement = document.createElement('img');
     cardElement.setAttribute('src', 'card_images/back.png');
-    cardElement.setAttribute('data-id', i);
+    cardElement.setAttribute('data-id', 'i');
     cardElement.addEventListener('click', flipCard);
     document.getElementById('game-board').appendChild(cardElement);
   }
 };
 createBoard();
+var clearBoard = function() {
+  for (var i = 0; i < cards.length; i++) {
+    cardElement.setAttribute('src', 'card_images/back.png');
+  }
+  //change the set attribute to filter thru the pictures randomly
+};
+
+var button = document.querySelector('button');
+button.addEventListener('click', clearBoard);
