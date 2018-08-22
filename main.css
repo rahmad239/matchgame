@@ -3,18 +3,20 @@
     color: coral;
     font-style: italic;
     text-align: center;
-}
-
-h1, h2 {
-    font-family: 'Roboto', sans-serif;
-
 } */
 
-header {
-    background-color: #f15b31;
-    color: #ffffff;
-    padding:  30px 20px;
+ h2 {
+    font-family: 'Open Sans', sans-serif;
 
+
+}
+
+header {
+    background-color: #f5dbd4;
+    color: #524a4a;
+    padding:  30px 20px;
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
 }
 
 h1 {
@@ -60,13 +62,20 @@ footer {
     font-weight: 500;
 
 }
+
 .button {
-    background-color: red;
+    background-color: #c4c1c0;
     border: none;
-    color: white;
-    padding: 15px 32px;
+    color: rgb(53, 51, 51);
+    padding: 15px 25px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
+    cursor: pointer;
+    -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+}
+
+.button:hover {
+    background-color: #00A6B3;
 }

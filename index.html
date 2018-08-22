@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Match Maker</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i|Pacifico" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -14,30 +14,32 @@
     </header>
     
     <nav>
-        <a href="#">Instructions</a>
-        <a href="#">Game</a>
+        <a href="#Instructions">Instructions</a>
+        <a href="#game">Game</a>
     </nav>
 
     <main>
-    <h2>Directions</h2>
+    <h2 id="Instructions">Directions</h2>
         <p>Memory or Match Maker (as we like to call it) is a card game designed to help
         improve memory. All cards start face down, at each turn a player is to turn
         two cards face up in an attempt to reveal two matching cards. The object of 
         the game is to reveal all matches.</p>
     <h2>Match Making Twist</h2>
         <p>Unlike traditional match games, this one will require you to be cupid and match power couples. This game was 
-        fun challenge for me and gave me a chance to learn more about coding logical sequence of operation, DOM manipulation and a few CSS tricks.
+        a fun challenge for me and gave me a chance to learn more about coding logical sequence of operation, DOM manipulation and a few CSS tricks.
         The couples who are on the cards have all made an impact both individualy and
         within thier partnership that has impressed me.</p>
     <h2>About Me</h2> 
         <p><a id="profile"href="www.linkedin.com/in/rahmad239">I</a> am a sprouting developer and this game reminded me of the power we have as creators in
         our craft and the power of combinining with other powerful people. This game was FUN!
         My goal is to experience the excitement and love for learning coding as I am building 
-        my skill set in it.</p>
+        my skill set.</p>
     </main>
-    <div id="game-board" class="board clearfix"></div>
+    <div id="game-board" class="board clearfix">
+            <h2 id="cards"> Flip Cards By Clicking!</h2>
 
-    <div> <button type="button">Reset!</button> </div>
+    </div>
+    <button class="button"type="button" onclick="alert('working!')">Reset!</button>
 
     <footer>
         <p class= "copyright"> copyright 2018</p>
