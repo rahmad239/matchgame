@@ -89,11 +89,12 @@ var checkForMatch = function() {
 //play with the placement of the statments above to get the alerts to fire in the order you prefer
 
 //create a function to make the board
+
 var createBoard = function() {
   for (var i = 0; i < cards.length; i++) {
     var cardElement = document.createElement('img');
     cardElement.setAttribute('src', 'card_images/cardback2.jpg');
-    cardElement.setAttribute('data-id', 'i');
+    cardElement.setAttribute('data-id', i);
     cardElement.addEventListener('click', flipCard);
     document.getElementById('game-board').appendChild(cardElement);
   }
@@ -101,11 +102,15 @@ var createBoard = function() {
 createBoard();
 
 var clearBoard = function() {
-  console.log('working now with this!');
+  alert('working now with this!');
+  for (var i = 0; i < cards.length; i++) {
+    var cardElement = document.createElement('img');
+    cardElement.setAttribute('src', 'card_images/cardback2.jpg');
+    cardElement.setAttribute('data-id', i);
+
+    document.getElementById('game-board').appendChild(cardElement);
+  }
 };
-//   for (var i = 0; i < cards.length; i++) {
-//   }
-// };
 
 var button = document.querySelector('button');
 button.addEventListener('click', clearBoard);
