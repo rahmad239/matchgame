@@ -11,6 +11,9 @@
 
 }
 
+#cards {
+    font-weight: bold;
+}
 header {
     background-color: #f5dbd4;
     color: #524a4a;
@@ -39,7 +42,8 @@ a {
 
 body {
     text-align: center;
-    margin: 0; 
+    margin:   auto; 
+    width: 1000px
 }
 
 main {
@@ -60,6 +64,7 @@ footer {
     font-size: 14px;
     letter-spacing: .08em;
     font-weight: 500;
+    margin: 0px;
 
 }
 

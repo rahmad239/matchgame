@@ -99,13 +99,13 @@ var createBoard = function() {
   }
 };
 createBoard();
-// var clearBoard = function() {
-//   cardElement.addEventListener('click', testconsole.log('working!')
+
+var clearBoard = function() {
+  console.log('working now with this!');
+};
 //   for (var i = 0; i < cards.length; i++) {
-//     cardElement.setAttribute('src', 'card_images/back.png');
 //   }
-//change the set attribute to filter thru the pictures randomly
 // };
 
-// var button = document.querySelector('button');
-// button.addEventListener('click', clearBoard);
+var button = document.querySelector('button');
+button.addEventListener('click', clearBoard);
